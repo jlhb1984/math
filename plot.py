@@ -11,13 +11,13 @@ serie_f=[]
 T=255
 w=(2*pi)/T
 
-a0=1/T
+a0=1/65025
 n=1
 tiempo=0.1
 for i in range(0,5):
     #an[i]=
-    an.append((-(1/(n*pi)))*(math.sin(2*pi*n)-math.sin(1.992*pi*n)))
-    bn.append(((1/(n*pi)))*(math.cos(2*pi*n)-math.cos(1.992*pi*n)))
+    an.append((-(1/(n*pi)))*(math.sin((2/255)*pi*n)-math.sin(0.0078*pi*n)))
+    bn.append(((1/(n*pi)))*(math.cos((2/255)*pi*n)-math.cos(0.0078*pi*n)))
     n=n+1
 print(an)
 print(bn)
@@ -29,5 +29,3 @@ y=(a0+an[0]*np.cos(w*t*1)+bn[0]*np.sin(w*t*1)+
       an[2]*np.cos(w*t*3)+bn[2]*np.sin(w*t*3))
 plt.plot(t,y)
 plt.show()
-
-
