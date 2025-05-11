@@ -15,7 +15,8 @@ T2=105
 
 w1=(2*pi)/T1
 w2=(2*pi)/T2
-a0=1/T1
+a01=1/T1
+a02=1/T2
 n=1
 
 for i in range(0,5):
@@ -38,14 +39,14 @@ print('bn2: ',bn2)
 
 t=np.linspace(0,4096,16384)
 #y=(an[0]*math.sin(w*t*1)+bn[0]*math.cos(w+t*1))
-y1=(1/255+an1[0]*np.cos(w1*t*1)+bn1[0]*np.sin(w1*t*1)+
+y1=(a01+an1[0]*np.cos(w1*t*1)+bn1[0]*np.sin(w1*t*1)+
       an1[1]*np.cos(w1*t*2)+bn1[1]*np.sin(w1*t*2)+
       an1[2]*np.cos(w1*t*3)+bn1[2]*np.sin(w1*t*3)+
       an1[3]*np.cos(w1*t*4)+bn1[3]*np.sin(w1*t*4)+
       an1[4]*np.cos(w1*t*5)+bn1[4]*np.sin(w1*t*5)
       )
 
-y2=(1/105+an2[0]*np.cos(w2*t*1)+bn2[0]*np.sin(w2*t*1)+
+y2=(a02+an2[0]*np.cos(w2*t*1)+bn2[0]*np.sin(w2*t*1)+
       an2[1]*np.cos(w2*t*2)+bn2[1]*np.sin(w2*t*2)+
       an2[2]*np.cos(w2*t*3)+bn2[2]*np.sin(w2*t*3)+
       an2[3]*np.cos(w2*t*4)+bn2[3]*np.sin(w2*t*4)+
