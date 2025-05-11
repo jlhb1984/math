@@ -23,8 +23,8 @@ for i in range(0,5):
     an1.append( (1/(n*pi)) * (math.sin(2*pi*n)-math.sin(1.9921*pi*n)) )
     bn1.append( (-1/(n*pi)) * (math.cos(2*pi*n)-math.cos(1.9921*pi*n)) )
     n=n+1
-print(an1)
-print(bn1)
+print('an1: ',an1)
+print('bn1: ',bn1)
 n=1
 
 for i in range(0,5):
@@ -32,11 +32,11 @@ for i in range(0,5):
     an2.append( (1/(n*pi)) * (math.sin(2*pi*n)-math.sin(1.9809*pi*n)) )
     bn2.append( (-1/(n*pi)) * (math.cos(2*pi*n)-math.cos(1.9809*pi*n)) )
     n=n+1
-print(an2)
-print(bn2)
+print('an2: ',an2)
+print('bn2: ',bn2)
 
 
-t=np.linspace(0,4096,8192)
+t=np.linspace(0,4096,16384)
 #y=(an[0]*math.sin(w*t*1)+bn[0]*math.cos(w+t*1))
 y1=(1/255+an1[0]*np.cos(w1*t*1)+bn1[0]*np.sin(w1*t*1)+
       an1[1]*np.cos(w1*t*2)+bn1[1]*np.sin(w1*t*2)+
